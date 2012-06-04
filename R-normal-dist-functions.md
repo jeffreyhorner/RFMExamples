@@ -22,7 +22,7 @@ Ten random draws from the normal distribution:
 
 ```{r}
 library(ggplot2)
-qplot(1:10, rnorm(10), colour = runif(10)
+qplot(1:10, rnorm(10), colour = runif(10))
 ```
 
 Looks like:

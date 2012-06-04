@@ -15,7 +15,10 @@ Use them this way:
 
 The math behind the code:
 
-$$latex  f(x) = \frac{1}{(\sigma\sqrt{2 \pi})} e^{-((x - \mu)^2/(2 \sigma^2))} $$
+$$latex  
+f(x) = \frac{1}{(\sigma\sqrt{2 \pi})} e^{-(\frac{(x - \mu)^2}{2 \sigma^2})}
+$$
+
 
 
 Ten random draws from the normal distribution:

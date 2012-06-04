@@ -15,7 +15,7 @@ Use them this way:
 
 The math behind the code:
 
-$$latex  f(x) = 1/(sqrt(2 pi) sigma) e^-((x - mu)^2/(2 sigma^2)) $$
+$$latex  f(x) = 1/(sqrt(2 pi) \sigma) e^{-((x - mu)^2/(2 \sigma^2))} $$
 
 
 Ten random draws from the normal distribution:

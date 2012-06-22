@@ -1,0 +1,129 @@
+LaTeX Syntax Check
+========================================================
+
+## Pathological Cases:
+
+The Arithmetic mean is equal to $, 1 or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to $$, 2 or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to $$$, 3 or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to $$$$, 4 or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to $$$$$, 5 or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to $$$$$$, 6 or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to $$$$$$$, or the summation of n numbers divided by n.
+
+## Empty Syntax:
+
+The Arithmetic mean is equal to $latex$, or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to $$, or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to \(\), or the summation of n numbers divided by n.
+
+
+The Arithmetic mean is equal to $$latex$$, or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to $$$$, or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to \[\], or the summation of n numbers divided by n.
+
+## Blank Syntax:
+
+The Arithmetic mean is equal to $latex $, or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to $ $, or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to \( \), or the summation of n numbers divided by n.
+
+
+The Arithmetic mean is equal to $$latex $$, or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to $$ $$, or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to \[ \], or the summation of n numbers divided by n.
+
+
+
+## Regular:
+
+The Arithmetic mean is equal to $latex \frac{1}{n} \sum_{i=i}^{n} x_{i}$, or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to $\frac{1}{n} \sum_{i=i}^{n} x_{i}$, or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to \( \frac{1}{n} \sum_{i=i}^{n} x_{i} \), or the summation of n numbers divided by n.
+
+
+The Arithmetic mean is equal to $$latex \frac{1}{n} \sum_{i=i}^{n} x_{i}$$, or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to $$\frac{1}{n} \sum_{i=i}^{n} x_{i}$$, or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to \[ \frac{1}{n} \sum_{i=i}^{n} x_{i} \], or the summation of n numbers divided by n.
+
+---
+
+## With blockquotes:
+
+> The Arithmetic mean is equal to $latex \frac{1}{n} \sum_{i=i}^{n} x_{i}$, or the summation of n numbers divided by n.
+
+> The Arithmetic mean is equal to $\frac{1}{n} \sum_{i=i}^{n} x_{i}$, or the summation of n numbers divided by n.
+
+> The Arithmetic mean is equal to \( \frac{1}{n} \sum_{i=i}^{n} x_{i} \), or the summation of n numbers divided by n.
+
+
+> The Arithmetic mean is equal to $$latex \frac{1}{n} \sum_{i=i}^{n} x_{i}$$, or the summation of n numbers divided by n.
+
+> The Arithmetic mean is equal to $$\frac{1}{n} \sum_{i=i}^{n} x_{i}$$, or the summation of n numbers divided by n.
+
+> The Arithmetic mean is equal to \[ \frac{1}{n} \sum_{i=i}^{n} x_{i} \], or the summation of n numbers divided by n.
+
+---
+
+## With code blocks
+
+    The Arithmetic mean is equal to $latex \frac{1}{n} \sum_{i=i}^{n} x_{i}$, or the summation of n numbers divided by n.
+
+    The Arithmetic mean is equal to $\frac{1}{n} \sum_{i=i}^{n} x_{i}$, or the summation of n numbers divided by n.
+
+    The Arithmetic mean is equal to \( \frac{1}{n} \sum_{i=i}^{n} x_{i} \), or the summation of n numbers divided by n.
+
+
+    The Arithmetic mean is equal to $$latex \frac{1}{n} \sum_{i=i}^{n} x_{i}$$, or the summation of n numbers divided by n. 
+
+    The Arithmetic mean is equal to $$\frac{1}{n} \sum_{i=i}^{n} x_{i}$$, or the summation of n numbers divided by n.
+
+    The Arithmetic mean is equal to \[ \frac{1}{n} \sum_{i=i}^{n} x_{i} \], or the summation of n numbers divided by n.
+
+---
+
+## With multi-line
+
+The Arithmetic mean is equal to $latex \frac{1}{n}
+\sum_{i=i}^{n}
+x_{i}$, or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to $\frac{1}{n}
+\sum_{i=i}^{n}
+x_{i}$, or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to \( \frac{1}{n}
+\sum_{i=i}^{n}
+x_{i} \), or the summation of n numbers divided by n.
+
+
+The Arithmetic mean is equal to $$latex \frac{1}{n}
+\sum_{i=i}^{n}
+x_{i}$$, or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to $$\frac{1}{n}
+\sum_{i=i}^{n}
+x_{i}$$, or the summation of n numbers divided by n.
+
+The Arithmetic mean is equal to \[ \frac{1}{n}
+\sum_{i=i}^{n}
+x_{i} \], or the summation of n numbers divided by n.
+

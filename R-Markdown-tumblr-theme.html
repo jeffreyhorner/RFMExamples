@@ -1,0 +1,643 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<!--
+      Designed by
+		
+			_|_|_|      _|_|    _|_|_|_|    _|_|    _|  _|_|  
+			_|    _|  _|_|_|_|    _|      _|_|_|_|  _|_|      
+			_|    _|  _|          _|      _|        _|        
+			_|_|_|      _|_|_|      _|_|    _|_|_|  _|        
+			_|                                                
+			_|                                                
+
+			            _|        _|                      _|  
+			_|      _|        _|_|_|    _|_|_|  _|_|_|        
+			_|      _|  _|  _|    _|  _|    _|  _|    _|  _|  
+			  _|  _|    _|  _|    _|  _|    _|  _|    _|  _|  
+			    _|      _|    _|_|_|    _|_|_|  _|    _|  _|
+		
+		Found at http://www.tumblr.com/theme/467
+-->
+
+<html lang="en">
+<head>	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="Peter Vidani">
+	<meta name="viewport" content="width=790">
+	<title>{Title}{block:PostTitle} - {PostTitle}{/block:PostTitle}</title>	
+	{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+	<link rel="shortcut icon" href="{Favicon}">
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}" />
+	
+	<meta name="text:Disqus shortname" content="" />
+	
+	<meta name="if:Show RSS and Archive buttons" content="1">
+	<meta name="if:Show URL in posts" content="1">
+	<meta name="if:Show note count" content="1">
+	<meta name="if:Show notes on permalink page" content="1">
+	
+	<style type="text/css">
+	body {
+		font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-size: 10px;
+		color: #202020;
+		background: #FFFFFF;
+		margin: 40px 0 20px 0;
+		padding: 0;
+	}
+	
+	a:active, a:focus { outline: 0; }
+					
+	#content {
+		width: 770px;
+		margin: 0 auto; 
+	}
+		
+		#content #header {
+			border-bottom: 3px solid #202020;
+		}
+		
+			#content #header #top {
+				/* border-bottom: 1px solid #202020;*/
+				padding: 0 0 10px 0;
+				position: relative;
+			}
+		
+				#content #header #top a.title {
+					width: 688px;
+					color: #202020;
+					font-family: Georgia;
+					font-size: 72px;
+					font-style: italic;
+					font-weight: normal;
+					letter-spacing: -3px;
+					text-decoration: none;
+					margin: 0;
+				}
+				
+				#content #header #top .buttons {
+					position: absolute;
+					bottom: 24px;
+					right: 0;
+				}
+			
+					#content #header #top .buttons a {
+						color: #FFFFFF;
+						font-weight: bold;
+						text-transform: uppercase;
+						text-decoration: none;
+						background: #D00000;
+					}
+				
+			#content #header #bottom {
+				font-size: 10px;
+				padding: 8px 0;
+			}
+			
+				#content #header #bottom a {
+					color: #447777;
+					font-weight: bold;
+					text-decoration: none;
+				}
+	#content #newDay {
+		border-top: 1px solid #202020;
+		padding: 8px 0 0 0;
+	}
+	
+		#content #newDay .post { margin: 20px 0 70px 0; }
+		
+		#content #newDay .post img { max-width: 100%; }
+		
+		#content #newDay .date {
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+	
+		#content #newDay h2 {
+			font-family: Georgia;
+			font-size: 36px;
+			letter-spacing: -1px;
+			margin: 0;
+		}
+		
+			#content #newDay a.h2 {
+				color: #0F6F9F;
+				font-family: Georgia;
+				font-size: 36px;
+				font-weight: bold;
+				text-decoration: underline;
+				letter-spacing: -1px;
+				line-height: 34px;
+				margin: 0;
+			}
+			
+			  #content #newDay a.h2.title {
+			    color: #202020;
+			  }
+			
+			#content #newDay .quote {
+				font-family: Georgia;
+				font-size: 24px;
+				line-height: 1.3em;
+			}
+				
+		#content #newDay .post img {
+		  max-width: 764px;
+			border: 1px solid #8E8E8E;
+			padding: 1px;
+		}
+		
+		#content #newDay .post {
+			font-size: 12px;
+			/* background: #D9E5ED; */
+			font-family: 'Lucida Console', monospace;
+			padding: 1px 4px;
+		}
+		
+		#content #newDay .post {
+			font-family: Georgia;
+			font-size: 14px;
+			line-height: 1.6em;
+		}
+		
+			#content #newDay .post a {
+				color: #0F6F9F;
+				text-decoration: none;
+			}
+			
+				#content #newDay .post a:hover { color: #D00000; }
+				
+		/* this is for chat */
+		#content #newDay .post table {
+			font-family: Georgia;
+			font-size: 14px;
+			margin: 0 0 10px 0;
+			border-collapse: collapse;
+		}
+
+			#content #newDay .post table tr td {
+				padding: 0;
+				vertical-align: top;
+			}
+
+			#content #newDay .post table tr td.name {
+				font-weight: bold;
+				text-align: right;
+				padding: 4px 15px;
+			}
+
+			#content #newDay .post table tr td.words {
+				width: 100%;
+				text-align: left;
+				padding: 4px 1px;
+			}
+		/* that was for chat */
+			
+		#content #newDay .bottom {
+			width: 100%;
+			color: #444444;
+      font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-size: 10px;
+			line-height: 1.8;
+			text-transform: uppercase;
+		}
+			
+			#content #newDay .bottom .notes,
+			#content #newDay .bottom .tags {
+				text-transform: none !important;
+				margin: 0 13px 0 0;
+				float: left;
+			}
+		
+			#content #newDay .bottom a {
+				color: #444444;
+				text-transform: none;
+				text-decoration: underline;
+			}
+		
+				#content #newDay .bottom a.time {
+					text-decoration: underline;
+					font-weight: bold;
+					text-transform: uppercase;
+				}
+				
+				#content #newDay .bottom a:hover { text-decoration: underline; }
+
+	#content #pagination {
+		font-family: Georgia;
+		font-size: 12px;
+		text-align: right;
+		border-top: 3px solid #202020;
+		border-bottom: 1px solid #202020;
+		padding: 8px 0;
+		overflow: hidden;
+	}
+	
+		#content #pagination a.button {
+			color: #FFFFFF;
+			font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-size: 10px;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-decoration: none;
+			background: #D00000;
+			margin-left: 12px;
+		}
+		
+		#content #pagination .rss { 
+			font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-size: 10px;
+			float: left;
+		}
+			#content #pagination .rss a {
+				color: #447777;
+				font-weight: bold;
+			}
+			
+		#content #footer {
+			color: #8E8E8E;
+			line-height: 1.5em;
+			text-align: right;
+			margin: 8px 0 0 0;
+			overflow: hidden;
+		}
+
+			#content #footer form {
+				margin: 0 auto 10px auto;
+				float: left;
+			}
+
+				#content #footer form input.text {
+					width: 250px;
+				}
+	
+		#content #footer a {
+			color: #8E8E8E;
+		}
+			
+		ol.notes {
+			width: 100%;
+			border-bottom: solid 1px #ccc;
+	    padding: 48px 0 0 0px;
+	    margin: 8px 0px 0px 0px;
+	    list-style-type: none;
+		}
+		
+			ol.notes a {
+				color: #444444;
+			}
+
+			ol.notes li.note {
+				color: #777;
+				font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				font-size: 10px;
+		    border-top: solid 1px #ccc;
+		    padding: 4px;
+			}
+
+				ol.notes li.note img.avatar {
+			    vertical-align: -4px;
+			    margin-right: 10px;
+			    width: 16px;
+			    height: 16px;
+				}
+
+				ol.notes li.note span.action {
+					margin-bottom: 5px;
+				}
+		
+					ol.notes li.note span.action a {
+						font-weight: bold;
+					}
+
+				ol.notes li.note .answer_content {
+
+				}
+
+				ol.notes li.note blockquote {
+			    border-color: #eee;
+			    padding: 4px 10px;
+			    margin: 10px 0px 0px 25px;
+				}
+
+					ol.notes li.note blockquote a {
+				    text-decoration: none;
+					}
+					
+				ol.notes li.note a:hover {
+					text-decoration: underline;
+				}
+				
+    ul#likes {
+	    border-bottom: 1px solid #202020;
+	    list-style-type: none;
+	    margin: 0 0 0 0;
+	    padding: 0 0 20px 0;
+	    overflow: hidden;
+	  }
+
+	  li.like_post {
+	    width: 150px;		    
+      font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+      font-size: 10px;list-style-type: none;
+      margin: 0;
+	    padding: 0 56px 0 0; 
+	    float: left;
+	  }
+
+	    li.like_post:last-child {
+	      padding: 0;
+	      float: right;
+	    }
+
+	    li.like_post img {
+	      max-width: 146px;
+	      border: 1px solid #8E8E8E;
+  			padding: 1px;
+	    }
+
+	    li.like_post blockquote {
+	      margin: 0;
+	      padding: 0 0 0 10px;
+	      border-left: 1px solid #eee;
+	    }
+
+	    li.like_post .like_link a {
+	      font-size: 12px;
+	      color: #0F6F9F;
+	    }
+
+	      li.like_post .like_link a:hover {
+		      color: #D00000;
+		    }
+
+		  li.like_post .like_title {
+		    font-size: 12px;
+		  }
+
+	    li.like_post a {
+	      color: #202020;
+	    }
+
+	    li.like_post ol,
+	    li.like_post ul {
+	      margin: 0 0 0 15px;
+	      padding: 0;
+	    }
+
+      li.like_post .post_info_bottom {
+        margin: 10px 0 0 0;
+        display: block !important;
+      }
+
+        li.like_post .post_info_bottom a {
+          color: #0F6F9F;
+          text-decoration: none;
+        }
+
+          li.like_post .post_info_bottom a:hover {
+            color: #D00000;
+          }
+
+    a.arrow.back,
+    a.arrow.forward {
+      display: none !important;
+    }
+    
+    a.install {
+        width: 96px;
+        height: 20px;
+        background: url(http://static.tumblr.com/thpaaos/dHHkt0jor/install_theme.png);
+        display: block;
+        position: absolute;
+        top: 26px;
+        right: 3px;
+    }
+			
+	{CustomCSS}			
+	</style>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+  <script src="http://static.tumblr.com/thpaaos/78Jks5gyt/carousel.js" type="text/javascript"></script>
+  
+  <script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+   
+   <!-- BEGIN R HIGHLIGHTING -->
+   <style type="text/css">
+   pre {    
+      margin-top: 0;
+      max-width: 95%;
+      border: 1px solid #ccc;
+      line-height: 1em;
+   }
+
+   pre code {
+     display: block; padding: 0.5em;
+   }
+
+   code.r {
+      background-color: #F8F8F8;
+   }
+
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: rgb(88, 72, 246)
+   }
+
+   pre .number {
+     color: rgb(0, 0, 205);
+   }
+
+   pre .comment {
+     color: rgb(76, 136, 107);
+   }
+
+   pre .keyword {
+     color: rgb(0, 0, 255);
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: rgb(3, 106, 7);
+   }
+</style>
+
+<link rel="stylesheet" href="http://yandex.st/highlightjs/7.0/styles/default.min.css">
+<script src="http://yandex.st/highlightjs/7.0/highlight.min.js"></script>
+   
+   <!-- END R HIGHLIGHTING -->
+</head>
+<body>
+    <a href="http://www.tumblr.com/theme/467" class="install"></a>
+	<div id="content">
+		<div id="header">
+			<div id="top">
+				<a href="/" class="title">{Title}</a>
+				{block:IfShowRSSAndArchiveButtons}
+				<div class="buttons">
+					<a href="{RSS}" class="button">{lang:RSS}</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archive" class="button">{lang:Archive}</a>
+				</div>
+				{/block:IfShowRSSAndArchiveButtons}
+				<div style="clear: both"></div>
+			</div>
+			<div id="bottom">
+				{block:Description}{Description}&nbsp;&nbsp;{/block:Description}
+				{block:HasPages}
+                	<br/><br/>
+                    {block:Pages}<a href="{URL}">{Label}</a>&nbsp;&nbsp;{/block:Pages}
+                {/block:HasPages}
+                {block:AskEnabled}<a href="/ask">{AskLabel}</a>&nbsp;&nbsp;{/block:AskEnabled}
+                {block:SubmissionsEnabled}<a href="/submit">{SubmitLabel}</a>{/block:SubmissionsEnabled}
+			</div>
+		</div>
+		
+		{block:Posts}
+		<div id="newDay">
+		    {block:Date}
+			<div class="date">
+				{Month} {DayOfMonth}, {Year}
+			</div>
+			{/block:Date}
+			
+			<div class="post">
+				{block:Text}
+				{block:Title}<a href="{Permalink}" class="h2 title">{Title}</a>{/block:Title}
+				<p>{Body}</p>
+				{/block:Text}
+
+				{block:Link}
+				<a href="{URL}" class="h2" {Target}>{Name}</a>
+				<p>{block:Description}{Description}{/block:Description}</p>
+				{/block:Link}
+				
+				{block:Photo}
+					{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">{LinkCloseTag}
+					<p>{block:Caption}{Caption}{/block:Caption}</p>
+				{/block:Photo}
+				
+				{block:Quote}
+				<div class="quote">
+					"{Quote}"
+				</div>
+					<p>{block:Source}&mdash; {Source}{/block:Source}</p>
+				{/block:Quote}
+				
+				{block:Chat}
+					{block:Title}<div class="quote">{Title}</div>{/block:Title}
+					<table>
+						{block:Lines}
+						<tr>
+							{block:Label}<td class="name">{Label}</td>{block:Label}
+							<td class="words">{Line}</td>
+						</tr>
+						{/block:Lines}
+					</table>
+				{/block:Chat}
+				
+				{block:Audio}
+					{AudioPlayerBlack}
+					<p>{block:Caption}{Caption}{/block:Caption}</p>
+				{/block:Audio}
+				
+				{block:Video}
+					{Video-500}
+					<p>{block:Caption}{Caption}{/block:Caption}</p>
+				{block:Video}
+				
+				<div class="bottom">
+				    {block:Date}
+					<a href="{Permalink}" class="time">{12Hour}:{Minutes}{AmPm}</a>{block:IfShowURLInPosts}&nbsp;&nbsp;|&nbsp;&nbsp;
+					URL:  <a href="{ShortURL}">{ShortURL}</a>{block:IfShowURLInPosts}<br />
+					{block:IfDisqusShortname}(<a href="{Permalink}#disqus_thread" style="text-transform:lowercase;">{lang:View comments}</a>)&nbsp;{/block:IfDisqusShortname}
+					{/block:Date}
+					{block:IfShowNoteCount}
+  					{block:NoteCount}
+  					<div class="notes">(<a href="{Permalink}">{lang:Notes}: {FormattedNoteCount}</a>)</div>&nbsp;&nbsp;
+  					{/block:NoteCount}
+  				    {/block:IfShowNoteCount}
+					{block:HasTags}
+					<div class="tags"><span style="text-transform:uppercase;">{lang:Filed under}</span>: {block:Tags}<a href="{TagURL}">{Tag}</a>&nbsp;{block:Tags}</div>
+					{/block:HasTags}
+				</div>
+				<div class="clear"></div>
+				{block:IfShowNotesOnPermalinkPage}{PostNotes}{/block:IfShowNotesOnPermalinkPage}
+
+        {block:Permalink}
+        {block:IfDisqusShortname}
+        <div class="notecontainer" style="margin: 20px 0 1px 0; padding: 1px 10px 10px 10px;">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+          <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+        </div>
+        <div style="text-align: right; margin-top: 5px">
+          {lang:Blog comments powered by Disqus 2}
+        </div>
+        {/block:IfDisqusShortname}
+        {/block:Permalink}
+		</div>
+		{/block:Posts}
+		
+		<div id="pagination">
+			<div class="rss">{lang:RSS feed}: <a href="{RSS}">{RSS}</a></div>
+			{block:Pagination}
+			{lang:CurrentPage of TotalPages 2}
+			{block:PreviousPage}<a href="{PreviousPage}" class="button">{lang:Previous page}</a>{/block:PreviousPage} 
+			{block:NextPage}<a href="{NextPage}" class="button">{lang:Next page}</a>{/block:NextPage}
+			{/block:Pagination}
+			{block:PermalinkPagination}
+			{block:NextPost}<a href="{NextPost}" class="button">{lang:Previous post}</a>{/block:NextPost}
+			{block:PreviousPost}<a href="{PreviousPost}" class="button">{lang:Next post}</a>{/block:PreviousPost} 
+			{/block:PermalinkPagination}
+		</div>
+		
+		{block:IndexPage}
+		{block:Likes}
+		<div style="margin: 20px 0 10px 0; overflow: hidden">
+		    <em><strong>{lang:Liked posts on Tumblr}:</strong></em>
+		    <a href="http://www.tumblr.com/liked/by/{Name}" style="color: #202020; font-weight: bold; text-decoration: none; float: right;">{lang:More liked posts} &raquo;</a>
+		</div>
+		
+	  <div class="infiniteCarousel" style="position: relative">
+        <div class="wrapper">
+	      {Likes limit="8" width="150"}
+	    </div>
+	  </div>
+	  {/block:Likes}
+		{/block:IndexPage}
+		
+		<div id="footer">
+			<form action="/search" method="get">
+			    <input type="text" class="text" name="q" value="{SearchQuery}"/>
+			    <input type="submit" value="Search"/>
+			</form>
+			Theme is <a href="http://www.tumblr.com/theme/467">The Atlantic</a> by <a href="http://www.petervidani.com">Peter Vidani</a> for <a href="http://www.tumblr.com">Tumblr</a>.
+	</div>
+	
+  {block:IfDisqusShortname}
+  <script type="text/javascript">
+  //<![CDATA[
+  (function() {
+    var links = document.getElementsByTagName('a');
+    var query = '?';
+    for(var i = 0; i < links.length; i++) {
+      if(links[i].href.indexOf('#disqus_thread') >= 0) {
+        query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+      }
+    }
+    document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+    })();
+    //]]>
+    </script>
+  {/block:IfDisqusShortname}
+</body>
+</html>

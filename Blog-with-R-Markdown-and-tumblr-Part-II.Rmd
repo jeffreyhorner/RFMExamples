@@ -1,0 +1,20 @@
+In [Part I](http://jeffreyhorner.tumblr.com/post/25804518110/blog-with-r-markdown-and-tumblr-part-i) of this series I described how to set up your tumblr blog so that you can create posts like those on the example site [R Markdown Blog](http://rmarkdown.tumblr.com/).
+
+Now I'll describe how you can actually create such posts. I'll be using the [RStudio IDE](http://www.rstudio.org/) for the desktop in all the steps below, but know that you can use your own version of R and your own editor for steps 1 thru X. I personaly like the the RStudio knitr integration. It provides a really easy and fast iterative process to quickly show you how your post will look in HTML form.
+
+## Step 1: Install The Latest Versions of knitr and markdown
+
+As of this writing, markdown version 0.5.2 is on its way to CRAN so you will need to get it from github. This is easily done with Hadley Wickam's devtools package. Follow these steps to install devtools, then knitr, then markdown:
+
+```{r install-packages, eval=FALSE}
+install.packages('devtools')
+library(devtools)
+install_github('knitr','yihui')
+install_github('markdown','rstudio')
+```
+
+## Step 2: Create a New R Markdown Document
+
+In RStudio, click on **File** -> **New** -> **R Markdown**. This will create a new untitled file with some example markdown text. The first two lines of the file contain the title in markdown markdup, but we won't need that for our blog post. Go ahead and delete them.
+
+Save the file and name it "First-Blog.Rmd".

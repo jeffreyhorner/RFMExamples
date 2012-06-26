@@ -1,20 +1,73 @@
 In [Part I](http://jeffreyhorner.tumblr.com/post/25804518110/blog-with-r-markdown-and-tumblr-part-i) of this series I described how to set up your tumblr blog so that you can create posts like those on the example site [R Markdown Blog](http://rmarkdown.tumblr.com/).
 
-Now I'll describe how you can actually create such posts. I'll be using the [RStudio IDE](http://www.rstudio.org/) for the desktop in all the steps below, but know that you can use your own version of R and your own editor for steps 1 thru X. I personaly like the the RStudio knitr integration. It provides a really easy and fast iterative process to quickly show you how your post will look in HTML form.
+Now I'll describe how you can actually create such posts. I'll be using the [RStudio IDE](http://www.rstudio.org/) for the desktop in all the steps below, but know that you can use your own version of R and your own editor for steps 1 thru X. I personaly like the the RStudio knitr integration. It provides a really easy and fast iterative process to quickly edit markdown and render to HTML.
 
 ## Step 1: Install The Latest Versions of knitr and markdown
 
-As of this writing, markdown version 0.5.2 is on its way to CRAN so you will need to get it from github. This is easily done with Hadley Wickam's devtools package. Follow these steps to install devtools, then knitr, then markdown:
+As of this writing, markdown version 0.5.2 is on its way to CRAN so you will need to get it from github today. This is easily done with Hadley Wickam's devtools package. Follow these steps to install devtools, then knitr, then markdown:
 
 ```{r install-packages, eval=FALSE}
 install.packages('devtools')
 library(devtools)
 install_github('knitr','yihui')
+library(knitr)
 install_github('markdown','rstudio')
+library(markdown)
 ```
 
 ## Step 2: Create a New R Markdown Document
 
 In RStudio, click on **File** -> **New** -> **R Markdown**. This will create a new untitled file with some example markdown text. The first two lines of the file contain the title in markdown markdup, but we won't need that for our blog post. Go ahead and delete them.
 
-Save the file and name it "First-Blog.Rmd".
+Save the file and name it "First-Post.Rmd".
+
+## Step 3: Click the "Knit HTML" Button
+
+You should see a couple of windows flicker by with info, and then ultimately this:
+
+![rendered-html](rendered-html.png)
+
+If your window looks like this, then congratulations! You just created a valid R Markdown document and rendered it into an HTML page. This step automatically creates a new file called "First-Post.html", but we're not ready to blog just yet.
+
+### Side Note About Iterative Development
+
+If your window doesn't look like the above, then you've got some editing to do. You will now enter an iterative **edit/save/knit** loop, and this is where RStudio really shines. Here are the steps:
+
+1. Make your edits to First-Post.Rmd.
+2. Type **Ctrl-s** to save.
+3. Type **Ctrl-Shift-h** to re-run the knit2html command.
+4. If you get the output you want, your done, if not go to 1.
+  
+Simple as that!
+
+Suppose you're not using RStudio? Then you can still get pretty close to the above. Using your favorite editor, your favorite browser, and another R IDE, follow these steps:
+
+1. Make your edits to First-Post.Rmd, then save in your editor.
+2. Execute the following commands in R:
+
+```{r iterative-knit, eval=FALSE}
+knit2html('First-Post.Rmd') # Step 3
+browseURL('First-Post.html')# Step 3.1
+```
+
+Your browser should open with "First-Post.Rmd" displayed. If you get the output you want, hurray! Otherwise go to step 1.
+
+So goes iterative development ;) Now on to blogging...
+
+## Step 4: Execute knit() and markdown2HTML() Manually
+
+Up to this step, we've been using commands to create complete HTML documents, those that contain beginning HTML tags like **<html>**, **<head>**, and **<body>**... tags that every blogging platform will not accept in their blog posts. These commands also inject javascript code to render math equations and highlight R code chunks, which is nice, but those are already in our tumblr theme we created in Part I (something I didn't tell you before). So now our job is to prepare the HTML without these tags and extra javascript. We need to call **markdownToHTML()** with the fragment.only option set to **TRUE**. Run these steps manually in RStudio (or R):
+
+```{r html-fragment, eval=FALSE}
+knit('First-Post.Rmd')
+markdownToHTML('First-Post.md','First-Post.html',fragment.only=TRUE)
+```
+
+
+
+
+
+
+
+
+
